@@ -1,0 +1,32 @@
+{
+  "name": "common",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/morgan": "^1.9.4",
+    "@types/on-finished": "^2.3.1",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/readline-sync": "^1.4.8",
+    "@types/uuid": "^9.0.2",
+    "eslint": "^7.32.0",
+    "react": "^17.0.2",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express-validator": "^7.0.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.45",
+    "morgan": "^1.10.0",
+    "on-finished": "^2.4.1",
+    "readline-sync": "^1.4.10",
+    "uuid": "^9.0.0"
+  }
+}

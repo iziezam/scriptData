@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**","dist/**"]
+    },
+    "lint": {},
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "outputs": ["dist/**", ".next/**"],
+      "env": ["DB_HOST","DB_USER","DB_NAME","DB_PASSWORD"]
+    }
+  }
+}
